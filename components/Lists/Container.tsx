@@ -14,7 +14,9 @@ export const ListsContainer: React.FC = () => {
 
 	return (
 		<section className="ListsContainer max-w-md mx-auto">
-			<ButtonLink href="/lists/create">Create List</ButtonLink>
+			{lists.length > 0 && (
+				<ButtonLink href="/lists/create">Create List</ButtonLink>
+			)}
 			<div className="mt-8" />
 			<NoLists lists={lists} />
 			<ListsLoop lists={lists} />

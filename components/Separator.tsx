@@ -3,7 +3,7 @@ interface IProps {
 	className?: string;
 }
 
-export const Separator: React.FC<IProps> = ({
+export const NavbarSeparator: React.FC<IProps> = ({
 	isHorizontal = false,
 	className = '',
 }) => {
@@ -14,4 +14,8 @@ export const Separator: React.FC<IProps> = ({
 	const combinedClassNames = `border-gray-300 ${sizeClass}${extraClassNames}`;
 
 	return <div className={combinedClassNames} />;
+};
+
+export const HorizontalSeparator = () => {
+	return <div className="w-full border-t my-2 border-gray-300" />;
 };
